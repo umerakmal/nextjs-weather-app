@@ -19,14 +19,16 @@ const Signup = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
+      // const data = await res.json();
+      console.log(res);
       if (res.ok) {
-        router.push('/auth/login');
+        // router.push('/auth/login');
       }
     } catch (error) {
       console.error('Signup failed', error);
     }
   };
-
+  // console.log(formData)
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
